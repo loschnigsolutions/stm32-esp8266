@@ -3879,10 +3879,10 @@ END GROUP
 
 .inits          0x00000000080003f4       0x28
                 0x00000000080003f4                __data_regions_array_start = .
-                0x00000000080003f4        0x4 LONG 0x8001e5c LOADADDR (.data)
+                0x00000000080003f4        0x4 LONG 0x8001e68 LOADADDR (.data)
                 0x00000000080003f8        0x4 LONG 0x20000000 ADDR (.data)
                 0x00000000080003fc        0x4 LONG 0x20000088 (ADDR (.data) + SIZEOF (.data))
-                0x0000000008000400        0x4 LONG 0x8001e5c LOADADDR (.data_CCMRAM)
+                0x0000000008000400        0x4 LONG 0x8001e68 LOADADDR (.data_CCMRAM)
                 0x0000000008000404        0x4 LONG 0x10000000 ADDR (.data_CCMRAM)
                 0x0000000008000408        0x4 LONG 0x10000000 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x000000000800040c                __data_regions_array_end = .
@@ -3914,7 +3914,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x0000000008000420     0x1a3b
+.text           0x0000000008000420     0x1a47
  *(.text .text.*)
  .text.HAL_InitTick
                 0x0000000008000420       0x2c ./system/src/stm32f4-hal/stm32f4xx_hal.o
@@ -4092,53 +4092,53 @@ END GROUP
                 0x0000000008001dd4       0x10 ./system/src/cmsis/system_stm32f4xx.o
                 0x0000000008001dd4                AHBPrescTable
  .rodata.net_init.str1.4
-                0x0000000008001de4       0x31 ./src/main.o
- *fill*         0x0000000008001e15        0x3 
+                0x0000000008001de4       0x3d ./src/main.o
+ *fill*         0x0000000008001e21        0x3 
  .rodata.net_send.str1.4
-                0x0000000008001e18       0x10 ./src/main.o
+                0x0000000008001e24       0x10 ./src/main.o
                                           0xe (size before relaxing)
  .rodata._svfprintf_r.str1.1
-                0x0000000008001e28       0x11 /home/loschnigsolutions/STM32_Tools/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008001e34       0x11 /home/loschnigsolutions/STM32_Tools/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x0000000008001e39       0x22 /home/loschnigsolutions/STM32_Tools/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008001e45       0x22 /home/loschnigsolutions/STM32_Tools/gcc-arm-none-eabi-7-2018-q2-update/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x0000000008001e5b        0x0 linker stubs
+ .glue_7        0x0000000008001e67        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008001e5b        0x0 linker stubs
+ .glue_7t       0x0000000008001e67        0x0 linker stubs
 
-.vfp11_veneer   0x0000000008001e5c        0x0
- .vfp11_veneer  0x0000000008001e5c        0x0 linker stubs
+.vfp11_veneer   0x0000000008001e68        0x0
+ .vfp11_veneer  0x0000000008001e68        0x0 linker stubs
 
-.v4_bx          0x0000000008001e5c        0x0
- .v4_bx         0x0000000008001e5c        0x0 linker stubs
+.v4_bx          0x0000000008001e68        0x0
+ .v4_bx         0x0000000008001e68        0x0 linker stubs
 
-.iplt           0x0000000008001e5c        0x0
- .iplt          0x0000000008001e5c        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
+.iplt           0x0000000008001e68        0x0
+ .iplt          0x0000000008001e68        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
 
-.rel.dyn        0x0000000008001e5c        0x0
- .rel.iplt      0x0000000008001e5c        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
+.rel.dyn        0x0000000008001e68        0x0
+ .rel.iplt      0x0000000008001e68        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008001e5c                . = ALIGN (0x4)
-                0x0000000008001e5c                __exidx_start = .
+                0x0000000008001e68                . = ALIGN (0x4)
+                0x0000000008001e68                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000008001e5c                __exidx_end = .
-                0x0000000008001e5c                . = ALIGN (0x4)
-                0x0000000008001e5c                _etext = .
-                0x0000000008001e5c                __etext = .
+                0x0000000008001e68                __exidx_end = .
+                0x0000000008001e68                . = ALIGN (0x4)
+                0x0000000008001e68                _etext = .
+                0x0000000008001e68                __etext = .
 
-.data_CCMRAM    0x0000000010000000        0x0 load address 0x0000000008001e5c
+.data_CCMRAM    0x0000000010000000        0x0 load address 0x0000000008001e68
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x0000000010000000                . = ALIGN (0x4)
-                0x0000000008001e5c                _sidata = LOADADDR (.data)
+                0x0000000008001e68                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x88 load address 0x0000000008001e5c
+.data           0x0000000020000000       0x88 load address 0x0000000008001e68
  FILL mask 0xff
                 0x0000000020000000                _sdata = .
                 0x0000000020000000                __data_start__ = .
@@ -4169,7 +4169,7 @@ END GROUP
                 0x0000000020000088                _edata = .
                 0x0000000020000088                __data_end__ = .
 
-.igot.plt       0x0000000020000088        0x0 load address 0x0000000008001ee4
+.igot.plt       0x0000000020000088        0x0 load address 0x0000000008001ef0
  .igot.plt      0x0000000020000088        0x0 ./system/src/stm32f4-hal/stm32f4xx_hal.o
 
 .bss_CCMRAM     0x0000000010000000        0x0

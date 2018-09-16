@@ -65,7 +65,7 @@ void net_init()
 	//net_send("AT+RST");
 	//net_send("AT+CWJAP?");
 	//net_send("AT+CWLAP");
-	net_send("AT+CWJAP=\"viola\",\"vimala_wilfred\"");
+	net_send("AT+CWJAP=\"(WIFI_USERNAME)\",\"(WIFI_PASSWORD)\"");
 	net_send("AT+CIFSR");
 
 	while(1);
